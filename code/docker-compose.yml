@@ -58,7 +58,7 @@ services:
     depends_on:
       analytics:
         condition: service_healthy
-     ports:
+    ports:
       - 8000:8000
       - 8443:8443
     expose:
