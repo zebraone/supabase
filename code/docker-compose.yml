@@ -59,8 +59,8 @@ services:
       analytics:
         condition: service_healthy
      ports:
-      - 8000:8000/tcp
-      - 8443:8443/tcp
+      - 8000:8000
+      - 8443:8443
     expose:
       - 8000
       - 8443
