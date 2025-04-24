@@ -382,6 +382,11 @@ services:
     depends_on:
       vector:
         condition: service_healthy
+    ports:
+    #  # Pass down internal port because it's set dynamically by other services
+      - ${POSTGRES_PORT}:${POSTGRES_PORT}
+    expose:
+      - ${POSTGRES_PORT}
     environment:
       POSTGRES_HOST: /var/run/postgresql
       PGPORT: ${POSTGRES_PORT}
